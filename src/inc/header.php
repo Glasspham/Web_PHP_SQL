@@ -135,6 +135,8 @@
 									<li><a href="productbycat.php?catid=<?php echo $result['catId']?>&catName=<?php echo $result['catName']?>"><?php echo $result['catName']?></a></li>
 									<?php 			
 											}
+										} else {
+											echo '<li><a><strong>Updating in progress</strong></a></li>';
 										}
 									?>
 								</ul>
@@ -150,6 +152,8 @@
 									<li><a href="topbrand.php?brandId=<?php echo $result['brandId']?>&brandName=<?php echo $result['brandName']?>"><?php echo $result['brandName']?></a></li>
 									<?php 
 											}
+										} else {
+											echo '<li><a><strong>Updating in progress</strong></a></li>';
 										}
 									?>
 								</ul>
@@ -165,6 +169,8 @@
 									<li><a href="news.php?newsId=<?php echo $result['id']?>"><?php echo $result['title']?></a></li>
 									<?php
 											}
+										} else {
+											echo '<li><a><strong>Updating in progress</strong></a></li>';
 										}
 									?>
 								</ul>
