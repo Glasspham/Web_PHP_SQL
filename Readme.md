@@ -14,7 +14,7 @@ Dự án này là làm theo kênh [của Hiếu Tutorial with live project](http
 
 | Bootstrap |
 |----------|
-| <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original-wordmark.svg" title="bootstrap"  alt="bootstrap" width="55" height="55"/> |
+| <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original-wordmark.svg" title="bootstrap"  alt="bootstrap" width="55" height="55" align="center"/> |
 
 ### Technology
 
