@@ -88,8 +88,9 @@ Password: 123
 ```
 
 <img alt="image" src="./img/pic8.png" width="800">
+
 <br>
-<br>
+
 <img alt="image" src="./img/pic9.png" width="800">
 
 ### Lưu ý:
