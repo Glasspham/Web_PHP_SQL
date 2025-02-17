@@ -114,7 +114,7 @@ _Step 4:_ Kiểm tra File `header.php` nằm trong Folder `inc` và File `login.
 Đây là sai! Vì có 1 khoảng cách trước
 
 ```bash
-
+...
  <?php
     //Code
 ?>
