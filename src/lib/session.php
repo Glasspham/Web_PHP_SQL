@@ -2,7 +2,6 @@
 class Session {
     public static function init() {
         if (session_status() == PHP_SESSION_NONE) {
-            ob_start();
             session_start();
         }
     }

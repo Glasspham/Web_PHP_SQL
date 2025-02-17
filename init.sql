@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `tbl_admin` (
     `username` varchar(255) NOT NULL,
     `password` varchar(255) NOT NULL,
     `level` int(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=2;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_blog` (
     `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -21,12 +21,12 @@ CREATE TABLE IF NOT EXISTS `tbl_blog` (
     `category_post` int(11) NOT NULL,
     `image` varchar(255) NOT NULL,
     `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=5;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_brand` (
     `brandId` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `brandName` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_cart` (
     `cartId` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -37,12 +37,12 @@ CREATE TABLE IF NOT EXISTS `tbl_cart` (
     `quantity` int(11) NOT NULL,
     `image` varchar(255) NOT NULL,
     `buy` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=26;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_category` (
     `catId` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `catName` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=17;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_comment` (
     `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `tbl_customer` (
     `phone` varchar(20) NOT NULL,
     `email` varchar(50) NOT NULL,
     `password` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=2;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_order` (
     `orderId` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `tbl_order` (
     `image` varchar(255) NOT NULL,
     `date` timestamp NOT NULL DEFAULT current_timestamp(),
     `order_code` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_placed` (
     `placedId` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `tbl_post_category` (
     `title` varchar(255) NOT NULL,
     `description` text NOT NULL,
     `status` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=5;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_product` (
     `productId` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `tbl_product` (
     `type` int(11) NOT NULL,
     `image` varchar(255) NOT NULL,
     `quantity` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=5;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE `tbl_purchase_history` (
     `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `tbl_slider` (
     `sliderName` varchar(255) NOT NULL,
     `type` int(11) NOT NULL,
     `image` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=5;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_statistic` (
     `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `tbl_statistic` (
     `_order` int(11) NOT NULL,
     `quantity` int(11) NOT NULL,
     `date` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci AUTO_INCREMENT=5;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE IF NOT EXISTS `tbl_warehouse` (
     `id` int(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,

@@ -10,7 +10,7 @@ services:
       - ./src:/var/www/html
   db:
     image: mysql:5.7
-    command: --default-authentication-plugin=mysql_native_password
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     restart: always
     ports:
       - 3306:3306
@@ -20,5 +20,9 @@ services:
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
       MYSQL_AUTHENTICATION_PLUGIN: mysql_native_password
+      LANG: C.UTF-8
     volumes:
+      - mysql_data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+volumes:
+  mysql_data:  
