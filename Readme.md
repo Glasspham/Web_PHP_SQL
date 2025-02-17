@@ -1,91 +1,105 @@
-# Giới Thiệu
+# 🚀 Hướng Dẫn Sử Dụng
+
+## 📌 Mục Lục
+
+1. [Giới thiệu](#giới-thiệu)
+2. [Công nghệ sử dụng](#💻-công-nghệ-sử-dụng)
+3. [Cách chạy chương trình](#cách-chạy-chương-trình)
+    - [Chạy bằng Docker](#cách-1-chạy-bằng-docker)
+    - [Chạy bằng XAMPP](#cách-2-chạy-bằng-xampp)
+4. [Xem cơ sở dữ liệu](#xem-cơ-sở-dữ-liệu)
+5. [Tổng hợp lệnh Docker](#tổng-hợp-lệnh-docker)
+
+---
+
+## 📖 Giới Thiệu
 
 Dự án này là làm theo kênh [của Hiếu Tutorial with live project](https://youtube.com/playlist?list=PLWTu87GngvNwRxrFZ_wbxfvHHed14H5RC&si=1sXmTl2WHD_ElVrx) và được cãi tiến và thay đổi đi bớt code cho phù hợp!
 
-## 💻Languages and Tools
+## 💻 Công Nghệ Sử Dụng
 
-### Languages:
+### Ngôn ngữ lập trình:
 
-| HTML                                                                                                                                        | CSS                                                                                                                                     | JS                                                                                                                                                | PHP                                                                                                                                   | MySQL                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML"  alt="HTML" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg" title="CSS"  alt="CSS" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JS"  alt="JS" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/php/php-original.svg" title="php"  alt="php" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" title="mysql" alt="mysql" width="55" height="55"/> |
+| HTML                                                                                | CSS                                                                               | JS                                                                                            | PHP                                                                             | MySQL                                                                                        |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| ![](https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg) | ![](https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg) | ![](https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg) | ![](https://github.com/devicons/devicon/blob/master/icons/php/php-original.svg) | ![](https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg) |
 
 ### Framework
 
-| Bootstrap                                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg" title="bootstrap"  alt="bootstrap" width="55" height="55" align="center"/> |
+| Bootstrap                                                                                   |
+| ------------------------------------------------------------------------------------------- |
+| ![](https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg) |
 
 ### Technology
 
-| Docker                                                                                                                                            | Git                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg" title="docker"  alt="docker" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" title="git"  alt="git" width="55" height="55"/> |
+| Docker                                                                                | Git                                                                             |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ![](https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg) | ![](https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg) |
 
-# Cách chạy chương trình
+## 📌 Cách Chạy Chương Trình
 
-## Cách 1: Chạy bằng `Docker`
+### Cách 1: Chạy bằng Docker
 
-**Step 1:** Tải folder `.rar` hoặc `git clone` về máy. Chú ý nhớ đường dẫn (path)!
+**Step 1:** Clone dự án hoặc tải file `.rar` về máy
+
+```sh
+git clone https://github.com/your-repo/project.git
+```
 
 <img alt="image" src="./img/pic1.png" width="800">
 
-**Step 2:** Open `terminal` của `vscode` hoặc `Window PowerShell` của máy có sẵn. Trỏ đúng vị trí chứa thư mục bằng lệnh cd như sau:
+**Step 2:** Truy cập vào thư mục chứa project
 
-```bash
-cd `path`
-
+```sh
+cd path/to/project
 ```
 
 Ví dụ trong máy tôi: path = `E:\Code\WebsiteMVC` file `Dockerfile` nằm trong folder WebsiteMVC. => cd `E:\Code\WebsiteMVC`
 
 <img alt="image" src="./img/pic2.png" width="800">
 
-**Step 3:** Nhập câu lệnh này vào để khởi tạo image + run container
+**Step 3:** Chạy Docker Compose
 
-```bash
+```sh
 docker-compose up -d
 ```
 
 <img alt="image" src="./img/pic3.png" width="800">
 
-Để check xem trong docker đã tạo ra 2 image thì dùng lệnh:
+**Step 4:** Kiểm tra container có chạy không
 
-```bash
+-   Lệnh:
+
+```sh
 docker ps
 ```
 
 <img alt="image" src="./img/pic4.png" width="800">
 
-Hoặc tải Docker Desktop về sẽ coi được image với container dễ dàng hơn như 2 hình dưới đây:
+-   Docker Desktop:
 
-Check Images
+_Check Images_
 
 <img alt="image" src="./img/pic5.png" width="800">
 
-Check Containers
+_Check Containers_
 
 <img alt="image" src="./img/pic6.png" width="800">
 
-**Step 4:** Khi thấy container đã chạy thì mình vào 1 browser nhập vào `localhost`.
+**Step 4:** Mở trình duyệt và truy cập
 
-_Trang chủ_
+-   Trang chủ: [http://localhost](http://localhost)
 
 <img alt="image" src="./img/pic7.png" width="800">
 
-Tài khoản login vào website để mua sắm thử:
+Tài khoản login vào website thử:
 
-```bash
+```sh
 Tài khoản: dongoc@gmail.com
 Password: 123
 ```
 
-_Trang cho admin_: Nhập `localhost/admin`
-
-```bash
-Tài khoản: glassadmin
-Password: 123
-```
+-   Trang admin: [http://localhost/admin](http://localhost/admin)
 
 <img alt="image" src="./img/pic8.png" width="800">
 
@@ -93,7 +107,14 @@ Password: 123
 
 <img alt="image" src="./img/pic9.png" width="800">
 
-### Lưu ý:
+Tài khoản login vào admin thử:
+
+```sh
+Tài khoản: glassadmin
+Password: 123
+```
+
+#### Lưu ý:
 
 Trang admin có thể bị lỗi `Cannot modify header information - headers already sent by (output started at ...` thì làm theo các bước sau:
 
@@ -113,7 +134,7 @@ _Step 4:_ Kiểm tra File `header.php` nằm trong Folder `inc` và File `login.
 
 Đây là sai! Vì có 1 khoảng cách trước
 
-```bash
+```sh
 .<?php
     //Code
 ?>
@@ -121,7 +142,7 @@ _Step 4:_ Kiểm tra File `header.php` nằm trong Folder `inc` và File `login.
 
 Đây là sai! Vì có 1 dòng trắng phía trước
 
-```bash
+```sh
 ...
 <?php
     //Code
@@ -132,34 +153,67 @@ Dấu . đại diện cho khoảng trắng thừa
 
 Đây là đúng!
 
-```bash
+```sh
 <?php
     //Code
 ?>
 ```
 
-## Cách 2: Chạy bằng [Xampp](https://www.apachefriends.org/download.html) vào kênh youtube mà tôi làm theo sẽ có hướng dẫn chạy bằng xampp. Rồi bạn import file `init.sql` vào trong `http://localhost/phpmyadmin`.
+### Cách 2: Chạy bằng XAMPP
 
-# Xem cơ sở dữ liệu
+- Cài đặt XAMPP từ [Apache Friends](https://www.apachefriends.org/download.html).
+- Chạy Apache và MySQL.
+- Import file `init.sql` vào `http://localhost/phpmyadmin`.
+- Mở trình duyệt và truy cập `http://localhost`.
 
-Có thể dùng extension `MySQL By Weijan Chen` của `vscode` như tôi liên kết với hệ thống để coi CSDL hoặc dùng `MySQL Workbench` hoặc dùng `adminer` một `Image` quản lý MySQL trên [Docker Hub](https://hub.docker.com/_/adminer).
+## 🗃 Xem Cơ Sở Dữ Liệu
 
-**1. Extension MySQL**
+Có thể dùng một trong các cách sau để quản lý CSDL:
+
+### 1. Dùng Extension `MySQL By Weijan Chen` trên VSCode
+
+[Tải về](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-mysql-client2)
 
 _Tải về:_
 <img alt="image" src="./img/pic13.png" width="800">
 
-_Thông tin kết nối:_
+**Cấu hình kết nối:**
+```sh
+Host: 127.0.0.1
+User: root
+Port: 3306
+Password: 123
+```
 
 Password có thể sửa ở trong file `docker-compose.yml`
 
 <img alt="image" src="./img/pic14.png" width="800">
 
+### 2. Dùng MySQL Workbench
+
+[Tải về](https://dev.mysql.com/downloads/workbench/)
+
+**Cấu hình kết nối:**
+```sh
+Host: 127.0.0.1
+User: root
+Port: 3306
+Password: 123
+```
+Password có thể sửa ở trong file `docker-compose.yml`
+
+### 3. Dùng Adminer (trên Docker)
+
+```sh
+docker run --name myadmin -d --link mysql:db -p 8080:8080 adminer
+```
+Sau đó vào `http://localhost:8080`.
+
 ## Lưu ý:
 
 Trong File `docker-compose.yml` tôi có đoạn:
 
-```bash
+```sh
 - mysql_data:/var/lib/mysql
 
 volumes:
@@ -168,9 +222,9 @@ volumes:
 
 <img alt="image" src="./img/pic15.png" width="800">
 
-Giúp lưu giữ lại data ở phiên làm việc trước đó, khi bạn cập nhật File `docker-compose.yml` rồi phải dùng lệnh:
+Giúp lưu giữ lại data ở phiên làm việc trước đó. Nếu cập nhật `docker-compose.yml`, cần chạy lệnh sau để áp dụng thay đổi:
 
-```bash
+```sh
 docker compose down
 docker compose build --no-cache
 docker compose up -d
@@ -180,17 +234,17 @@ nếu không sẽ chạy data lại từ đầu như trong File `init.sql` đã 
 
 Và muốn tạo 1 file back up .sql khi đã cập nhật thêm dữ liệu thì có thể dùng lệnh:
 
-```bash
+```sh
 docker exec -i <mysql-container-name> mysqldump -u root -p --default-character-set=utf8mb4 -p<password-container> <name-database> > <filename>.sql
 ```
 
 Muốn cập nhật lại bằng file back up .sql thì dùng lệnh:
 
-```bash
+```sh
 docker exec -i <mysql-container-name> mysql -u root -p --default-character-set=utf8mb4 -p<password-container> <name-database> < <filename>.sql
 ```
 
-# Tổng hợp lệnh Docker
+## 🛠 Tổng Hợp Lệnh Docker
 
 Có thể dùng `docker-compose` hoặc `docker compose`.
 
@@ -198,72 +252,75 @@ Có thể dùng `docker-compose` hoặc `docker compose`.
 
 -   Build image
 
-```bash
+```sh
 docker compose build
 ```
 
 -   Build lại image
 
-```bash
+```sh
 docker compose build --no-cache
 ```
 
-2. Tạo `build image` và `run container` cùng:
+### 1. Xây dựng và chạy container
 
-```bash
+```sh
 docker-compose up -d
 ```
 
-3. Lệnh `stop` và `start` container:
+### 2. Dừng và khởi động lại container
 
 -   **Stop container**
 
-```bash
+```sh
 docker-compose stop
 ```
 
 -   **Start container**
 
-```bash
+```sh
 docker-compose start
 ```
 
-4. Lệnh `remove` container:
+### 3. Xóa container
 
 -   Xóa mỗi container:
 
-```bash
+```sh
 docker-compose down
 ```
 
 -   Xóa container và volumes:
 
-```bash
+```sh
 docker-compose down -v
 ```
 
-5. Lệnh `export/import` với `Database` bằng File `.sql`:
+### 4. Export Database
 
--   **Export Database**
-
-```bash
+```sh
 docker exec -i <mysql-container-name> mysqldump -u root -p --default-character-set=utf8mb4 -p<password-container> <name-database> > <filename>.sql
 ```
 
 _Ví dụ:_
 
-```bash
+```sh
 docker exec -i website-db-1 mysqldump -u root -p --default-character-set=utf8mb4 -p123 WEBSITE > backup.sql
 ```
 
--   **Import Database**
+### 5. Import Database
 
-```bash
+```sh
 docker exec -i <mysql-container-name> mysql -u root -p --default-character-set=utf8mb4 -p<password-container> <name-database> < <filename>.sql
 ```
 
 _Ví dụ:_
 
-```bash
+```sh
 docker exec -i website-db-1 mysql -u root -p --default-character-set=utf8mb4 -p123 WEBSITE < backup.sql
 ```
+
+## 📢 Kết Luận
+README này giúp bạn cài đặt và chạy dự án dễ dàng hơn. Nếu có vấn đề, hãy mở issue trên GitHub hoặc liên hệ trực tiếp!
+
+🚀 **Chúc bạn thành công!**
