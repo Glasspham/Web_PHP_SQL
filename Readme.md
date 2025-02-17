@@ -114,8 +114,7 @@ _Step 4:_ Kiểm tra File `header.php` nằm trong Folder `inc` và File `login.
 Đây là sai! Vì có 1 khoảng cách trước
 
 ```bash
-...
- <?php
+.<?php
     //Code
 ?>
 ```
@@ -123,11 +122,13 @@ _Step 4:_ Kiểm tra File `header.php` nằm trong Folder `inc` và File `login.
 Đây là sai! Vì có 1 dòng trắng phía trước
 
 ```bash
-
+...
 <?php
     //Code
 ?>
 ```
+
+Dấu . đại diện cho khoảng trắng thừa
 
 Đây là đúng!
 
