@@ -43,7 +43,7 @@ Dự án này là làm theo kênh [của Hiếu Tutorial with live project](http
 **Step 1:** Clone dự án hoặc tải file `.rar` về máy
 
 ```sh
-git clone https://github.com/your-repo/project.git
+git clone https://github.com/Glasspham/Web_PHP_SQL.git
 ```
 
 <img alt="image" src="./img/pic1.png" width="800">
@@ -54,7 +54,7 @@ git clone https://github.com/your-repo/project.git
 cd path/to/project
 ```
 
-Ví dụ trong máy tôi: path = `E:\Code\WebsiteMVC` file `Dockerfile` nằm trong folder WebsiteMVC. => cd `E:\Code\WebsiteMVC`
+Ví dụ trong máy tôi: `path/to/project` = `E:\Code\WebsiteMVC` => cd `E:\Code\WebsiteMVC`
 
 <img alt="image" src="./img/pic2.png" width="800">
 
@@ -103,8 +103,6 @@ Password: 123
 
 <img alt="image" src="./img/pic8.png" width="800">
 
-<br>
-
 <img alt="image" src="./img/pic9.png" width="800">
 
 Tài khoản login vào admin thử:
@@ -118,7 +116,7 @@ Password: 123
 
 Trang admin có thể bị lỗi `Cannot modify header information - headers already sent by (output started at ...` thì làm theo các bước sau:
 
-_Step 1:_ Open `Docker Desktop` >> nhấn vào container php-1
+_Step 1:_ Open `Docker Desktop` >> nhấn vào container `php-1`
 
 <img alt="image" src="./img/pic10.png" width="800">
 
@@ -130,7 +128,7 @@ _Step 3:_ Nhấn lướt xuống tìm Folder `var` >> `www` >> `html` >> `admin`
 
 <img alt="image" src="./img/pic12.png" width="800">
 
-_Step 4:_ Kiểm tra File `header.php` nằm trong Folder `inc` và File `login.php`. Xem dòng:
+_Step 4:_ Kiểm tra File `header.php` nằm trong Folder `inc` và File `login.php`. Xem dòng đầu:
 
 Đây là sai! Vì có 1 khoảng cách trước
 
@@ -161,12 +159,23 @@ Dấu . đại diện cho khoảng trắng thừa
 
 ### Cách 2: Chạy bằng XAMPP
 
-- Cài đặt XAMPP từ [Apache Friends](https://www.apachefriends.org/download.html).
-- Chạy Apache và MySQL.
-- Import file `init.sql` vào `http://localhost/phpmyadmin`.
-- Mở trình duyệt và truy cập `http://localhost`.
+-   Cài đặt XAMPP từ [Apache Friends](https://www.apachefriends.org/download.html).
+-   Chạy Apache và MySQL.
+-   Import file `init.sql` vào `http://localhost/phpmyadmin`.
+-   Mở trình duyệt và truy cập `http://localhost`.
 
 ## 🗃 Xem Cơ Sở Dữ Liệu
+
+**Cấu hình kết nối:**
+
+```sh
+Host: 127.0.0.1
+User: root
+Port: 3306
+Password: 123
+```
+
+Password có thể sửa ở trong file `docker-compose.yml`
 
 Có thể dùng một trong các cách sau để quản lý CSDL:
 
@@ -177,36 +186,20 @@ Có thể dùng một trong các cách sau để quản lý CSDL:
 _Tải về:_
 <img alt="image" src="./img/pic13.png" width="800">
 
-**Cấu hình kết nối:**
-```sh
-Host: 127.0.0.1
-User: root
-Port: 3306
-Password: 123
-```
-
-Password có thể sửa ở trong file `docker-compose.yml`
-
 <img alt="image" src="./img/pic14.png" width="800">
 
 ### 2. Dùng MySQL Workbench
 
 [Tải về](https://dev.mysql.com/downloads/workbench/)
 
-**Cấu hình kết nối:**
-```sh
-Host: 127.0.0.1
-User: root
-Port: 3306
-Password: 123
-```
-Password có thể sửa ở trong file `docker-compose.yml`
+<img alt="image" src="./img/pic15.png" width="800">
 
 ### 3. Dùng Adminer (trên Docker)
 
 ```sh
 docker run --name myadmin -d --link mysql:db -p 8080:8080 adminer
 ```
+
 Sau đó vào `http://localhost:8080`.
 
 ## Lưu ý:
@@ -220,7 +213,7 @@ volumes:
   mysql_data:
 ```
 
-<img alt="image" src="./img/pic15.png" width="800">
+<img alt="image" src="./img/pic16.png" width="800">
 
 Giúp lưu giữ lại data ở phiên làm việc trước đó. Nếu cập nhật `docker-compose.yml`, cần chạy lệnh sau để áp dụng thay đổi:
 
@@ -248,7 +241,7 @@ docker exec -i <mysql-container-name> mysql -u root -p --default-character-set=u
 
 Có thể dùng `docker-compose` hoặc `docker compose`.
 
-1. `Build image`
+### 1. `Xây dựng và tải các Iamge
 
 -   Build image
 
@@ -262,13 +255,13 @@ docker compose build
 docker compose build --no-cache
 ```
 
-### 1. Xây dựng và chạy container
+### 2. Xây dựng và chạy container
 
 ```sh
 docker-compose up -d
 ```
 
-### 2. Dừng và khởi động lại container
+### 3. Dừng và khởi động lại container
 
 -   **Stop container**
 
@@ -282,7 +275,7 @@ docker-compose stop
 docker-compose start
 ```
 
-### 3. Xóa container
+### 4. Xóa container
 
 -   Xóa mỗi container:
 
@@ -296,7 +289,7 @@ docker-compose down
 docker-compose down -v
 ```
 
-### 4. Export Database
+### 5. Export Database
 
 ```sh
 docker exec -i <mysql-container-name> mysqldump -u root -p --default-character-set=utf8mb4 -p<password-container> <name-database> > <filename>.sql
@@ -308,7 +301,7 @@ _Ví dụ:_
 docker exec -i website-db-1 mysqldump -u root -p --default-character-set=utf8mb4 -p123 WEBSITE > backup.sql
 ```
 
-### 5. Import Database
+### 6. Import Database
 
 ```sh
 docker exec -i <mysql-container-name> mysql -u root -p --default-character-set=utf8mb4 -p<password-container> <name-database> < <filename>.sql
@@ -321,6 +314,7 @@ docker exec -i website-db-1 mysql -u root -p --default-character-set=utf8mb4 -p1
 ```
 
 ## 📢 Kết Luận
+
 README này giúp bạn cài đặt và chạy dự án dễ dàng hơn. Nếu có vấn đề, hãy mở issue trên GitHub hoặc liên hệ trực tiếp!
 
 🚀 **Chúc bạn thành công!**
