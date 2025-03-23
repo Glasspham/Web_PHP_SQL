@@ -32,7 +32,7 @@
                     <tr>
                         <td><?php echo $i ?></td>
                         <td><?php echo $result['productName'] ?></td>
-                        <td><img src="admin/uploads/<?php echo $result['image'] ?>" alt="" /></td>
+                        <td><img src="uploads/product/<?php echo $result['image'] ?>" alt="" /></td>
                         <td><?php echo $fm->format_currency($result['price']) ?></td>
                         <td><a href="details.php?productId=<?php echo $result['productId']?>">View</a> | <a href="?delId=<?php echo $result['id']?>">X</a></td>
                     </tr>

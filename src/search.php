@@ -20,7 +20,7 @@
                     while($result = $search->fetch_assoc()) {
             ?>
             <div class="grid_1_of_4 images_1_of_4" style="margin-left: 0">
-                <a href="preview-3.php"><img src="admin/uploads/<?php echo $result['image']?>" alt="" /></a>
+                <a href="preview-3.php"><img src="uploads/product/<?php echo $result['image']?>" alt="" /></a>
                 <h2><?php echo $result['productName']?></h2>
                 <p><span class="price">$<?php echo $fm->format_currency($result['price']) ?></span></p>
                 <div class="button">

@@ -36,7 +36,7 @@
                                 <tr>
                                     <th scope="row"><?php echo $i?></th>
                                     <td><?php echo $result['productName']?></td>
-                                    <td><img src="admin/uploads/<?php echo $result['image']?>" alt="" width="70px"></td>
+                                    <td><img src="uploads/product/<?php echo $result['image']?>" alt="" width="70px"></td>
                                     <td><?php echo $result['quantity']?></td>
                                     <td>$<?php $totalPrice += $result['totalPrice']; echo $result['totalPrice']?></td>
                                 </tr>

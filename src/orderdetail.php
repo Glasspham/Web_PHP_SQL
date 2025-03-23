@@ -44,7 +44,7 @@
                             <tr>
                                 <td><?php echo $i ?></td>
                                 <td><?php echo $result['productName'] ?></td>
-                                <td> <img src="admin/uploads/<?php echo $result['image'] ?>" style="width:30%; height:30%;" alt=""></td>
+                                <td> <img src="uploads/product/<?php echo $result['image'] ?>" style="width:30%; height:30%;" alt=""></td>
                                 <td>$<?php $subTotal += $result['price']; echo $fm->format_currency($result['price']); ?></td>
                                 <td><?php echo $result['quantity'] ?></td>
                                 <td><?php echo $fm->formatDate($result['date']) ?></td>

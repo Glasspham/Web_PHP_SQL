@@ -19,7 +19,7 @@
         </div>
         <div class="section group">
             <div class="grid_1_of_4 images_1_of_4">
-                <a href="preview-3.php"><img src="admin/uploads/blog/<?php echo $result['image']?>" alt="" /></a>
+                <a href="preview-3.php"><img src="uploads/product/blog/<?php echo $result['image']?>" alt="" /></a>
                 <h2><?php echo $result['title']?></h2>
                 <p><?php echo $result['description']?></p>
                 <div class="button">

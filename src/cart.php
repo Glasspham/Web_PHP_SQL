@@ -85,7 +85,7 @@
                     ?>
                     <tr>
                         <td><?php echo $result['productName'] ?></td>
-                        <td><img src="admin/uploads/<?php echo $result['image'] ?>" alt=""/></td>
+                        <td><img src="uploads/product/<?php echo $result['image'] ?>" alt=""/></td>
                         <td>$<?php echo $fm->format_currency($result['price']) ?></td>
                         <td>
                             <form action="" method="post" style="display: flex; flex-direction: column; align-items: center;">

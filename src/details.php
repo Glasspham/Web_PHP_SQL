@@ -71,13 +71,15 @@
                     <div class="add-cart">
                         <form action="" method="post">
                             <?php 
-                                if($result['quantity'] > 0)
-                                    echo '
-                                        <input type="hidden" class="buyfield" name="stock" value="'.$result['quantity'].'"/>
-                                        <input type="number" class="buyfield" name="quantity" value="1" min="1"/>
-                                        <input type="submit" class="buysubmit" name="buy" value="Add To Cart" />
-                                    ';
-                                else echo'<span class="error">Out of stock</span>';
+                                if($result['quantity'] > 0){
+                                    if(Session::get('customer_login')){
+                                        echo '
+                                            <input type="hidden" class="buyfield" name="stock" value="'.$result['quantity'].'"/>
+                                            <input type="number" class="buyfield" name="quantity" value="1" min="1"/>
+                                            <input type="submit" class="buysubmit" name="buy" value="Add To Cart" />
+                                        ';
+                                    } else echo '<span class="error">Please login to buy product</span>';
+                                } else echo'<span class="error">Out of stock</span>';
                             ?>
                         </form>
                     </div>
