@@ -14,7 +14,7 @@ class history {
         $query = "SELECT *
                 FROM tbl_purchase_history 
                 WHERE customerId='$id' 
-                GROUP BY order_code 
+                -- GROUP BY order_code 
                 ORDER BY date_received DESC";
         $result = $this->db->select($query);
         return $result; 
